@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+ <h1>javascript background color</h1>
+ <button id="khan">click me</button>
+</body>
+<script>
+const btn=document.getElementById("khan");
+
+const body=document.querySelector("body");
+const color=["red", "green","blue", "yellow", "pink", "grey", "lime"];
+
+body.style.backgroundColor="black";
+btn.addEventListener("click",()=>{
+    const colorIndex= parseInt(Math.random() * color.length);
+    body.style.backgroundColor= color[colorIndex];
+    body.style.transition= "1s linear";
+})
+</script>
+</html>
